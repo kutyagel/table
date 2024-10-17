@@ -8,7 +8,7 @@ table tbody tr:nth-child(even){
     background-color: rgb(2, 180, 150);
 }
 table tbody tr:nth-child(odd){
-    background-color: rgb(12, 68, 21);
+    background-color: rgb(209, 0, 45);
 }
  
 table tbody tr:hover{
@@ -16,6 +16,13 @@ table tbody tr:hover{
 }
  
 table thead tr{
-    background-color: rgb(195, 0, 255);
+    background-color: rgb(11, 170, 149);
     font-weight: bold;
+}
+.selected{
+    transform: scale(1.2);
+    
+}
+.error{
+    color: red;
 }
