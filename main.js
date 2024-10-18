@@ -56,19 +56,19 @@ function validateFields(lastHTMLname, firstHTMLname, petHTML){
     
     let result = true
     if (lastHTMLname.value === '') {
-        let result = false
+        result = false
         const apa = lastHTMLname.parentElement
         const error = apa.querySelector('.error')
         error.innerHTML='KÖTELEZŐ VEZETÉKNÉV MEGADÁSA'
     }
     if (firstHTMLname.value === '') {
-        let result = false
+        result = false
         const apa = firstHTMLname.parentElement
         const error = apa.querySelector('.error')
         error.innerHTML='KÖTELEZŐ KERESZTNÉV MEGADÁSA'
     }
     if (petHTML.value === '') {
-        let result = false
+        result = false
         const apa = petHTML.parentElement
         const error = apa.querySelector('.error')
         error.innerHTML='KÖTELEZŐ HÁZIÁLLAT MEGADÁSA'
