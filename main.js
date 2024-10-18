@@ -1,3 +1,19 @@
+/**
+ * 
+ * @param {'td'|'th'} elem 
+ * @param {string} elem2 inner html
+ * @param {HTMLTableRowElement} anya 
+ * @returns {HTMLTableCellElement}
+ */
+
+
+function createTablecell(elem, elem2, anya ) {
+    const element = document.createElement(elem);
+    element.innerHTML = elem2;
+    anya.appendChild(element);
+    return element;
+}
+
 function renderTable(){
     for (const pers of array) {
         const tr_body = document.createElement("tr");
@@ -114,6 +130,15 @@ const th_lastname = document.createElement("th");
 const th_firstname = document.createElement("th");
 const th_hazas = document.createElement("th");
 const th_pet = document.createElement("th");
+th_lastname.innerHTML = "Vezeténév";
+th_firstname.innerHTML = "Keresztnév";
+th_hazas.innerHTML = "Házas";
+th_pet.innerHTML = "Pet"
+th_firstname.colSpan = 2;
+createTablecell('th', 'Vezetéknév', 'tr')
+const kernev = createTablecell('th', 'Keresztnév', 'tr')
+ kernev.colSpan = 2
+createTablecell('th', 'Házas', 'tr')
 const tbody = document.createElement("tbody");
 
 document.body.appendChild(table);
@@ -125,11 +150,6 @@ tr.appendChild(th_hazas);
 tr.appendChild(th_pet);
 table.appendChild(tbody);
 
-th_lastname.innerHTML = "Vezeténév";
-th_firstname.innerHTML = "Keresztnév";
-th_hazas.innerHTML = "Házas";
-th_pet.innerHTML = "Pet"
-th_firstname.colSpan = 2;
 
 
 const form =document.getElementById("form");
